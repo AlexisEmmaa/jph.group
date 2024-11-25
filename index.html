@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jph Group</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<!-- Top Navigation Bar -->
+<div class="top-nav">
+  <div class="left-contact">
+      <div class="contact-item">
+          <i class="fas fa-phone"><ion-icon name="call-outline"></ion-icon></i>
+          <span>+254 758 247 553</span>
+      </div>
+      <div class="contact-item">
+          <i class="fas fa-envelope"><ion-icon name="mail-outline"></ion-icon></i>
+          <span>info@jph.group</span>
+      </div>
+  </div>
+  <div class="center-social-icons">
+      <a href="#"><ion-icon name="logo-facebook"></ion-icon><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><ion-icon name="logo-twitter"></ion-icon><i class="fab fa-twitter"></i></a>
+      <a href="#"><ion-icon name="logo-instagram"></ion-icon><i class="fab fa-instagram"></i></a>
+      <a href="#"><ion-icon name="logo-youtube"></ion-icon><i class="fab fa-youtube"></i></a>
+      <a href="#"><ion-icon name="logo-whatsapp"></ion-icon><i class="fab fa-youtube"></i></a>
+  </div>
+  <div class="button-container">
+    <a href="login.html" class="register-btn">Login</a>
+</div>
+</div>
+<!-- Navbar -->
+<header class="navbar">
+<div class="logo-container">
+  <span class="logo-jph">Jph.</span>
+  <span class="logo-investments">Investments Group</span>
+</div>  
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+<style>
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: Arial, sans-serif;
+  }
+
+  .hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url('C:\Users\Britney\Desktop\JPH GROUP\img\vertical-cityscape-with-tall-skyscrapers-new-york-usa.jpg'); /* Replace with your background image */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+      z-index: 1;
+  }
+
+  .typewriter-container {
+      position: relative;
+      text-align: center;
+      z-index: 2; /* Above the overlay */
+      color: #ffffff;
+  }
+
+  #typewriter {
+      font-size: 3rem;
+      font-weight: bold;
+      white-space: pre-line; /* Enables line breaks */
+      overflow: hidden;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      #typewriter {
+          font-size: 2rem;
+      }
+  }
+</style>
+</head>
+<body>
+<div class="hero-section">
+  <!-- Overlay for the dark background effect -->
+  <div class="overlay"></div>
+
+  <!-- Typewriter content -->
+  <div class="typewriter-container">
+      <h1 id="typewriter"></h1>
+  </div>
+</div>
+
+<script>
+  const text = ["Empowering", "Sustainable", "Growth"]; // Each word on a new line
+  const typewriterElement = document.getElementById("typewriter");
+  let wordIndex = 0;
+  let letterIndex = 0;
+
+  function typeWriter() {
+      if (wordIndex < text.length) {
+          if (letterIndex < text[wordIndex].length) {
+              // Add one character from the current word
+              typewriterElement.innerHTML += text[wordIndex].charAt(letterIndex);
+              letterIndex++;
+              setTimeout(typeWriter, 100); // Continue typing the same word
+          } else {
+              // Word is complete, move to the next word and add a line break
+              typewriterElement.innerHTML += "<br>";
+              letterIndex = 0;
+              wordIndex++;
+              setTimeout(typeWriter, 500); // Pause before starting the next word
+          }
+      } else {
+          // All words are typed; add blinking cursor effect
+          setInterval(() => {
+              typewriterElement.style.borderRight =
+                  typewriterElement.style.borderRight === "3px solid #ffffff"
+                      ? "3px solid transparent"
+                      : "3px solid #ffffff";
+          }, 500);
+      }
+  }
+
+  typeWriter(); // Start the typewriter effect
+</script>
+
+
+  
+  <!-- Mission Section -->
+  <section class="mission" id="about">
+    <section class="about-us">
+      <div class="about-container">
+          <div class="about-image">
+              <img src="img\DALL·E 2024-11-25 14.00.40 - A visually striking industry-themed image showcasing JPH Group branding. The image features a modern industrial landscape with high-tech equipment and.webp" alt="About Us">
+          </div>
+          <div class="about-content">
+              <h2>About Us</h2>
+              <p>
+                  JPH Group is a pioneering African technology consultancy focused on delivering eco-friendly, innovative solutions to support sustainable growth across the continent. 
+                  As a product developer, manufacturer, and distributor, we offer high-tech advancements tailored to the unique needs of African industries.
+              </p>
+              <p>
+                  From Nano paint technology to green manufacturing solutions, we combine leading-edge products with deep regional knowledge to foster sustainable industrial development.
+              </p>
+              <a href="about.html" class="learn-more">Learn More</a>
+          </div>
+      </div>
+  </section>
+      <div class="features">
+        <div class="feature-item">
+          <h3>Simplify</h3>
+          <p>We aim to simplify the complex process for our clients.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Expertise</h3>
+          <p>Our financial experts guide you through the process.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Speed</h3>
+          <p>We prioritize timely and organized outcomes.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Trust</h3>
+          <p>Providing the trust our clients demand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="toolbar">
+    <!-- Accessibility Tools -->
+    <div class="dropdown accessibility">
+      <button class="accessibility-icon" aria-label="Accessibility Tools">
+        ♿
+        <span class="tooltip">Accessibility Tools</span>
+      </button>
+      <div class="dropdown-content">
+        <button onclick="changeFontSize(1)">Increase Text</button>
+        <button onclick="changeFontSize(-1)">Decrease Text</button>
+        <button onclick="toggleGrayscale()">Grayscale</button>
+        <button onclick="toggleContrast()">High Contrast</button>
+      </div>
+    </div>
+
+<!-- Language Selector -->
+<div class="dropdown language-selector">
+  <button class="language-icon" aria-label="Change Language">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/25px-Flag_of_the_United_States.svg.png" alt="English" />
+    <span class="tooltip">Change Language</span>
+  </button>
+  <div class="dropdown-content">
+    <button data-lang="en">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/25px-Flag_of_the_United_States.svg.png" alt="English" />
+      English
+    </button>
+    <button data-lang="fr">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_France.svg/25px-Flag_of_France.svg.png" alt="French" />
+      French
+    </button>
+    <button data-lang="de">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Switzerland.svg/25px-Flag_of_Switzerland.svg.png" alt="German" />
+      German
+    </button>
+    <button data-lang="sw">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Kenya.svg/25px-Flag_of_Kenya.svg.png" alt="Swahili" />
+      Swahili
+    </button>
+  </div>
+</div>
+  </section>
+
+  <script>
+    let fontSize = 16;
+
+function changeFontSize(change) {
+  fontSize += change;
+  document.body.style.fontSize = `${fontSize}px`;
+}
+
+function toggleGrayscale() {
+  document.body.style.filter =
+    document.body.style.filter === "grayscale(100%)" ? "none" : "grayscale(100%)";
+}
+
+function toggleContrast() {
+  document.body.style.filter =
+    document.body.style.filter === "contrast(200%)" ? "none" : "contrast(200%)";
+}
+// Function to simulate changing language
+function changeLanguage(language) {
+  const languages = {
+    en: "Welcome! This is the English version of the page.",
+    fr: "Bienvenue! Ceci est la version française de la page.",
+    de: "Willkommen! Dies ist die deutsche Version der Seite.",
+    sw: "Karibu! Hii ni toleo la Kiswahili la ukurasa."
+  };
+
+  // Update page content based on selected language
+  const message = languages[language] || "Language not supported.";
+  alert(message); // Simulating a language change. Replace with actual translation logic.
+}
+
+// Add event listeners to language buttons
+document.querySelectorAll(".language-selector .dropdown-content button").forEach(button => {
+  button.addEventListener("click", () => {
+    const language = button.getAttribute("data-lang");
+    changeLanguage(language);
+  });
+})
+function changeLanguage(language) {
+  // Check if the language exists in translations
+  if (translations[language]) {
+    // Update text content dynamically
+    document.getElementById("welcome-text").textContent = translations[language].welcome;
+    document.getElementById("mission-text").textContent = translations[language].mission;
+    document.getElementById("vision-text").textContent = translations[language].vision;
+  } else {
+    alert("Selected language is not supported.");
+  }
+}
+
+// Add event listeners to language buttons
+document.querySelectorAll(".language-selector .dropdown-content button").forEach(button => {
+  button.addEventListener("click", () => {
+    const language = button.getAttribute("data-lang");
+    changeLanguage(language);
+  });
+});
+</script>
+
+ <!-- Content Section -->
+ <section class="content-section">
+  <div class="content-grid">
+    <!-- Vision -->
+    <div class="content-item">
+      <i class="fas fa-globe"></i>
+      <h3>Vision</h3>
+      <p>To be a global leader in sustainable technology solutions, empowering Africa’s industries to thrive through innovation and environmental stewardship..</p>
+    </div>
+    <!-- Mission -->
+    <div class="content-item">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Mission</h3>
+      <p>To deliver cutting-edge, eco-friendly products and services that support Africa’s industrial growth, foster sustainability, and create lasting social and economic impact.</p>
+    </div>
+    <!-- Objectives -->
+    <div class="content-item">
+      <i class="fas fa-globe-americas"></i>
+      <h3>Objectives</h3>
+      <ul>
+        <li>Sustainable Growth: Promote eco-friendly solutions that drive economic development while conserving resources.</li>
+        <li>Community Impact: Improve lives by prioritizing initiatives that benefit society and the environment</li>
+        <li>Empowering Industries: Equip African businesses with advanced technologies tailored to regional challenges and opportunities.</li>
+        <li>Global Partnerships: Forge alliances with international organizations to bring world-class standards to Africa’s development projects.</li>
+        <li>Innovation Leadership: Continuously innovate to remain at the forefront of sustainable technologies.</li>
+      </ul>
+    </div>
+    <!-- Core Values -->
+    <div class="content-item">
+      <i class="fas fa-handshake"></i>
+      <h3>Core Values</h3>
+      <ul>
+        <li>Innovation: Pursue excellence through creativity and cutting-edge technology.</li>
+        <li>Integrity: Operate with transparency, accountability, and trustworthiness</li>
+        <li>Collaboration: Build strong partnerships to achieve shared goals</li>
+        <li>Community-Centered: Focus on creating solutions that uplift and benefit local communities</li>
+        <li>Sustainability: Commitment to environmental responsibility in all our operations.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <!-- Industry Focus Section -->
+  <section class="industry-focus">
+    <div class="container">
+      <h2>Industry Focus</h2>
+      <p class="section-description">Explore the key industries where JPH Investments Group delivers innovative and sustainable solutions.</p>
+      <div class="industry-grid">
+        
+        <!-- Industry 1 -->
+        <div class="industry-card">
+          <img src="img\2 (2).jpg" alt="Battery Restoration">
+          <h3>Battery Restoration and Recycling Project</h3>
+          <p>Leading the way in sustainable energy solutions by restoring and recycling batteries to reduce waste and promote eco-friendly practices.</p>
+        </div>
+        
+        <!-- Industry 2 -->
+        <div class="industry-card">
+          <img src="img\nano.jpg" alt="Nano Technology Paint">
+          <h3>Nano Technology Paint Solutions</h3>
+          <p>Revolutionizing surfaces with advanced nano-coating technologies for durability, energy efficiency, and sustainability.</p>
+        </div>
+        
+        <!-- Industry 3 -->
+        <div class="industry-card">
+          <img src="img\GREENFUL_FACTORY-jpeg-6mb-1536x1025-1.jpg" alt="Greenful Waste-to-Construction">
+          <h3>Greenful Waste-to-Construction Factory</h3>
+          <p>Turning waste into sustainable building materials, driving circular economy practices in the construction sector.</p>
+        </div>
+        
+        <!-- Industry 4 -->
+        <div class="industry-card">
+          <img src="img\1 (3).jpg" alt="Renewable Energy Initiatives">
+          <h3>Renewable Energy Initiatives</h3>
+          <p>Empowering communities with renewable energy solutions to combat climate change and foster sustainability.</p>
+        </div>
+        
+        <!-- Industry 5 -->
+        <div class="industry-card">
+          <img src="img\water.jpg" alt="EVOdrop Water Filtration">
+          <h3>EVOdrop Water Filtration Systems</h3>
+          <p>Delivering clean, filtered water to communities with cutting-edge water filtration technology.</p>
+        </div>
+        
+        <!-- Industry 6 -->
+        <div class="industry-card">
+          <img src="img\city.jpg" alt="Real Estate Ventures">
+          <h3>Real Estate Ventures</h3>
+          <p>Innovating sustainable and eco-friendly real estate solutions to shape urban landscapes responsibly.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="success-section">
+    <div class="container">
+        <h2>Our Success</h2>
+        <div class="success-stats">
+            <div class="stat-item">
+                <h3>02</h3>
+                <p>Partnerships</p>
+            </div>
+            <div class="stat-item">
+                <h3>12</h3>
+                <p>Team Members</p>
+            </div>
+            <div class="stat-item">
+                <h3>33</h3>
+                <p>Investment Projects</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Success Rate</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="our-team">
+  <h2>Meet Our Team</h2>
+  <div class="team-container">
+
+    <div class="team-member">
+      <img src="img\IMG_1280.jpg" alt="Rene Tammemäe">
+      <h4>Rene Tammemäe</h4>
+      <p>COO / Partner</p>
+  </div>
+
+      <div class="team-member">
+          <img src="img\Business-Woman.jpg" alt="Janyne Almheiri">
+          <h4>Janyne Almheiri</h4>
+          <p>Founder & CEO</p>
+      </div>
+  
+      <div class="team-member">
+          <img src="img\IMG_4244-2_heic.jpg" alt="Stephen Bitok">
+          <h4>Stephen Bitok</h4>
+          <p>Business Development Executive</p>
+      </div>
+  </div>
+</section>
+
+  <!-- Featured Insights -->
+  <section class="insights" id="insights">
+    <div class="container">
+      <h2>NEWS</h2>
+      <div class="insights-grid">
+        <div class="insight-item">
+          <img src="img\battery.jpg" alt="Financial Trends">
+          <h3>How EXELX Battery Restoration Technology Can Revolutionize Industries Worldwide and in Africa!</h3>
+          <a href="insight1.html" class="read-more-btn">Read More</a>
+
+        </div>
+        <div class="insight-item">
+          <img src="img\nanotechnology.jpg" alt="Strategy">
+          <h3>How Nanotechnology is Revolutionizing the Paint Industry Worldwide and in Africa</h3>
+          <a href="insight2.html" class="read-more-btn">Read More</a>
+
+        </div>
+        <div class="insight-item">
+            <img src="img\city.jpg" alt="Strategy">
+            <h3>Uncovering the Potential of Impact Investing in Kenya's Tech Scene: A Closer Look</h3>
+            <a href="insight3.html" class="read-more-btn">Read More</a>
+
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial-slide active">
+            <p>"JPH Group's innovative Nano Paint technology transformed our infrastructure projects. It's cost-effective and eco-friendly."</p>
+            <h4>- Michael Odhiambo, CEO of EcoBuild Africa</h4>
+        </div>
+        <div class="testimonial-slide">
+            <p>"Their water filtration systems have brought clean drinking water to our community, significantly improving our quality of life."</p>
+            <h4>- Grace Njoroge, Community Leader</h4>
+        </div>
+        <div class="testimonial-slide">
+            <p>"The Greenful Waste-to-Construction materials are a game-changer for sustainable construction. Truly innovative!"</p>
+            <h4>- David Kamau, Architect</h4>
+        </div>
+        <div class="testimonial-slide">
+            <p>"JPH Group’s battery restoration project reduced our operational costs while promoting eco-conscious practices."</p>
+            <h4>- Linda Mwangi, Operations Manager</h4>
+        </div>
+    </div>
+    <div class="testimonial-controls">
+        <span class="control prev">&lt;</span>
+        <span class="control next">&gt;</span>
+    </div>
+</section>
+<script>
+  // JavaScript for testimonial slideshow
+let currentSlide = 0;
+const slides = document.querySelectorAll('.testimonial-slide');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+// Function to show slide
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+            slide.classList.add('active');
+        }
+    });
+}
+
+// Event listeners for controls
+prev.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+});
+
+next.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+});
+
+// Initialize first slide
+showSlide(currentSlide);
+</script>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <!-- Contact Section -->
+        <div class="footer-section contact">
+          <h3>Contact us</h3>
+          <p>info@jph.group</p>
+          <p>Jph Office: +254 758 247 553</p>
+          <p>Location: Kofisi square, Riverside drive,<br> Westlands, Nairobi</p>
+        </div>
+  
+        <!-- Social Media Section -->
+        <div class="footer-section social-media">
+          <h3>Follow us on social media</h3>
+          <div class="social-icons">
+              <a href="#" target="_blank"><i class="fab fa-facebook-f"></i><span class="tooltip">Facebook</span></a>
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i><span class="tooltip">Twitter</span></a>
+              <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i><span class="tooltip">LinkedIn</span></a>
+              <a href="#" target="_blank"><i class="fab fa-instagram"></i><span class="tooltip">Instagram</span></a>
+              <a href="#" target="_blank"><i class="fab fa-youtube"></i><span class="tooltip">YouTube</span></a>
+            </div>
+        </div>
+  
+        <!-- Newsletter Section -->
+        <div class="footer-section newsletter">
+          <h3>Sign up for our Newsletter</h3>
+          <p>Subscribe and get our latest insights right in your mailbox.</p>
+          <form action="#" class="newsletter-form">
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Last name">
+            <input type="email" placeholder="Email address">
+            <button type="submit" class="btn">Sign up</button>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2024 Jph Group. All Rights Reserved.</p>
+          <nav>
+            <a href="#">Privacy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Sitemap</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

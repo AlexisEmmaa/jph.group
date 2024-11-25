@@ -1,0 +1,112 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+.dashboard-header {
+  background: #004466;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.dashboard-header h1 {
+  margin-bottom: 10px;
+}
+
+.dashboard-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.dashboard-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.dashboard-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Styling */
+.dashboard-main {
+  padding: 20px;
+}
+
+/* Quick Links Section */
+.quick-links {
+  margin-bottom: 30px;
+}
+
+.quick-links h2 {
+  margin-bottom: 20px;
+  color: #004466;
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.link-card {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.link-card h3 {
+  color: #004466;
+  margin-bottom: 10px;
+}
+
+.link-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #004466;
+  font-weight: bold;
+}
+
+.link-card a:hover {
+  color: #0077aa;
+}
+
+/* Notifications Section */
+.notifications {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.notifications h2 {
+  color: #004466;
+  margin-bottom: 10px;
+}
+
+.notifications ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #333;
+}
+
+/* Footer Styling */
+.dashboard-footer {
+  background: #004466;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
